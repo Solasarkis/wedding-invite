@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabine & Wissam | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint: #a8d5ba;
+    --mint-light: #e8f5ec;
+    --mint-dark: #6fae8a;
+    --cream: #fdfcf8;
+    --text-dark: #33443c;
+    --gold: #c9a876;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, var(--mint-light) 0%, var(--cream) 40%);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 70px 24px 50px;
+    position: relative;
+  }
+
+  .hero::before, .hero::after {
+    content: "❧";
+    display: block;
+    font-size: 28px;
+    color: var(--mint-dark);
+    margin-bottom: 10px;
+  }
+
+  .love-phrase {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--mint-dark);
+    max-width: 420px;
+    margin: 0 auto 30px;
+  }
+
+  .names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+
+  .amp {
+    display: block;
+    font-size: 30px;
+    color: var(--gold);
+    margin: 6px 0;
+  }
+
+  .welcome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-top: 26px;
+    color: var(--text-dark);
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .divider {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--mint-dark);
+    letter-spacing: 6px;
+    font-size: 14px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--mint);
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(111, 174, 138, 0.12);
+    text-align: center;
+  }
+
+  .card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--mint-dark);
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 15px;
+  }
+
+  .detail-label {
+    font-weight: 600;
+    color: var(--mint-dark);
+  }
+
+  .dress-code {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--mint);
+    font-size: 14px;
+    color: var(--text-dark);
+  }
+
+  .dress-code span {
+    display: block;
+    margin: 4px 0;
+  }
+
+  .whish-box {
+    background: var(--mint-light);
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .whish-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--mint-dark);
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+
+  .rsvp h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  input {
+    padding: 13px 16px;
+    border: 1px solid var(--mint);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background: var(--mint-light);
+    color: var(--text-dark);
+  }
+
+  input:focus {
+    outline: none;
+    border-color: var(--mint-dark);
+    background: #fff;
+  }
+
+  button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--mint-dark);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  button:hover { background: #5a9575; }
+
+  .form-msg {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .form-msg.success { color: var(--mint-dark); display: block; }
+  .form-msg.error { color: #b56060; display: block; }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--mint-dark);
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <p class="love-phrase">
+      "Love is not about how many days, months, or years you've been together.
+      Love is about how much you love each other every single day."
+    </p>
+
+    <div class="names">
+      Sabine Samir Sarkis
+      <span class="amp">&amp;</span>
+      Wissam Adib Saad
+    </div>
+
+    <p class="welcome">
+      We are so happy to welcome you to celebrate the beginning of our forever.
+      Join us for an evening of love, laughter, and unforgettable memories.
+    </p>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <div class="card">
+    <h2>Wedding Details</h2>
+    <div class="detail-row"><span class="detail-label">Date:</span><span>September 19, 2026</span></div>
+    <div class="detail-row"><span class="detail-label">Time:</span><span>6:00 PM</span></div>
+    <div class="detail-row"><span class="detail-label">Venue:</span><span>Mövenpick Hotel, Beirut</span></div>
+
+    <div class="dress-code">
+      <span>👔 Suit is optional for men</span>
+      <span>👗 Ladies are kindly invited to wear pastel-coloured dresses</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Wedding Gift</h2>
+    <p style="font-size:14px;">If you'd like to bless us with a gift, we've set up a Whish account for your convenience.</p>
+    <div class="whish-box">
+      Whish Account
+      <div class="whish-number">20301335-01</div>
+    </div>
+  </div>
+
+  <div class="card rsvp">
+    <h2>Reserve Your Seat</h2>
+    <p style="font-size:14px;">Please let us know if you'll be joining us by filling out the form below.</p>
+
+    <form id="rsvpForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="number" id="guests" placeholder="Number of Guests (including you)" min="1" required>
+      <input type="text" id="attendees" placeholder="Name(s) of Attendees" required>
+      <button type="submit">Confirm My Presence</button>
+    </form>
+
+    <p class="form-msg" id="formMsg"></p>
+  </div>
+
+  <footer>With love, Sabine &amp; Wissam</footer>
+
+</div>
+
+<script>
+  // Google Apps Script Web App URL
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyIw_lS5qsF5mUFw_8dGPxmMeWpPsm8BZGPUXEzFnNe_OF-GRTkze8oTJGzoCuTIpoG/exec";
+
+  const form = document.getElementById("rsvpForm");
+  const msg = document.getElementById("formMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      guests: document.getElementById("guests").value,
+      attendees: document.getElementById("attendees").value
+    };
+
+    msg.className = "form-msg";
+    msg.textContent = "Sending...";
+    msg.style.display = "block";
+
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "text/plain" }
+    })
+      .then(() => {
+        msg.className = "form-msg success";
+        msg.textContent = "Thank you! Your reservation has been received. 🌿";
+        form.reset();
+      })
+      .catch(() => {
+        msg.className = "form-msg error";
+        msg.textContent = "Something went wrong. Please try again or contact us directly.";
+      });
+  });
+</script>
+
+</body>
+</html>
